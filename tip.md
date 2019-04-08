@@ -25,3 +25,6 @@
 * https://github.com/codecentric/spring-boot-admin
 * server - client
 
+## 6. HTTPPID
+https://httpie.org/
+
