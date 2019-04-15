@@ -11,7 +11,7 @@
 ### git branch 관리 전략
 git-flow(https://nvie.com/posts/a-successful-git-branching-model/) 전략을 기본으로 1개의 branch를 추가하여 관리하고 있습니다.
 
-![gitflow_coldfix](./img/gitflow_coldfix.JPG)
+![gitflow_coldfix](img/gitflow_coldfix.JPG)
 
 main branch와 support branch를 구분해서 사용하자는 것인데요. main에는 master, develop이 있고 support에는 feature, release, hotfix, 그리고 coldfix가 있습니다.
 
@@ -92,7 +92,7 @@ $ git stash pop
 ### 코드 리뷰 원칙
 PR은 코드 리뷰 원칙을 준수하고 있어요. github의 기능적 요소를 사용하여 review 후 merge를 위한 제약 사항을 지정할 수도 있지만, 코드 리뷰가 더딜 경우 긴급하게 merge가 되어야 할 상황을 고려하여 해당 기능을 사용하지는 않습니다. 단, 이럴 경우, `later PR` TAG를 명시하고 merge 이후에 코드 리뷰를 진행합니다.
 
-1. merge는 스스로 진행하고, PR의 reviewer 과반수가 ![good](./img/good.JPG)을 댓글로 남겼을 때만 merge를 진행합니다.
+1. merge는 스스로 진행하고, PR의 reviewer 과반수가 ![good](img/good.JPG)을 댓글로 남겼을 때만 merge를 진행합니다.
 제약사항은 구성원 스스로 원칙을 준수하도록 서로서로 규제하고 있습니다.
 
 2. review 작성 시, reviewer의 견해를 짐작할 수 있도록 review의 level을 지정하고 있습니다. review에는 해야 하거나 (MUST), 해도 되거나(SHOULD), 안 해도 되는(MAY) 의견이 있을 텐데요. review가 글로 표현되다 보니, review를 받는 당사자의 경우, 모든 review를 자칫 해야 하는 review로 오인하여 감정이 상하거나, 코드 리뷰 속도가 늦어지는 경우가 종종 있었습니다.
@@ -104,16 +104,16 @@ PR은 코드 리뷰 원칙을 준수하고 있어요. github의 기능적 요소
 | SHOULD | 주로 architecture 적인 요소로 reviewer의 추천, 추천이 참일 수도 있고, 거짓일 수도 있으므로, 토론이 필요할 수 있다. |
 | MAY | reviewer의 주관적인 요소로 작성자의 선택에 의해 반영되므로, 토론이 필요 없다. |
 
-![codereviewlevel](./img/codereviewlevel.JPG)
+![codereviewlevel](img/codereviewlevel.JPG)
 
 
-review 중에 MUST가 없으면 빠른 merge를 위해 ![good](./img/good.JPG) 바로 기재합니다.
+review 중에 MUST가 없으면 빠른 merge를 위해 ![good](img/good.JPG) 바로 기재합니다.
 review에 level을 지정해보니, 코드 리뷰를 요청한 당사자에게 reviewer의 견해를 인지할 수 있어 코드 리뷰 속도가 빨라지는 경험을 할 수 있었습니다.
 
 3. 코드 리뷰가 더딜 경우, 매일 아침 오프라인으로 코드 리뷰를 권유하고 있습니다.
 4. 코드 리뷰에는 반드시 답글을 달고, github의 index 기능을 이용하여 수정한 코드의 링크를 기재하여, reviewer에게 review의 피드백을 빠르게 인식할 수 있도록 합니다.
 
-![codereview](./img/codereview.JPG)
+![codereview](img/codereview.JPG)
 
 ### 마무리
 git branch 관리, 코드 리뷰 방식은 정해진 답은 없습니다. 다만, 협업에 있어 서로서로 branch 명만 봐도 의미가 통하고 그 행위를 인지할 수 있다면 그만큼 큰 효과가 없을 거라 판단됩니다. 또한, 코드 리뷰 역시 다양한 관점의 방법론이 존재하지만, review 시 level을 지정함으로써 review를 받는 사람이 reviewer의 의견을 정확히 인지하여 더욱 원활히 코드 리뷰를 진행할 수 있을 거라 판단됩니다. 
