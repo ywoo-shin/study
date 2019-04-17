@@ -1,8 +1,8 @@
-### 1. 자동 설정 구현
+### 49. Creating Your Own Auto-configuration
 https://docs.spring.io/spring-boot/docs/2.1.3.RELEASE/reference/html/boot-features-developing-auto-configuration.html
 
 
-#### 1.1 자동설정 jar 생성
+#### 1. 자동설정 jar 생성
 
 * 의존성 추가
 ```xml
@@ -55,7 +55,7 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration = com.toast.sprin
 
 ---
 
-#### 1.2 자동설정 이해
+#### 2 자동설정 이해
 ##### 자동 설정된 Bean을 사용하는 곳에서 Override가 필요할 경우
 * @ConditionalOnMissingBean (Bean이 없을 경우에만, DI 하는 annotation) 
 

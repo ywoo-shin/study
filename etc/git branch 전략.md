@@ -7,9 +7,8 @@
 이처럼 대부분 git과 github를 사용하고 계실 텐데요. git branch의 생성을 시작으로 "개발 -> Pull Request(PR) -> 코드 리뷰 -> merge"는 일련의 process로 정립되었습니다. 그런데 git branch의 관리와 코드 리뷰 방식은 딱히 정해진 규약이 없어 저마다 다른 방식으로 진행할 수 있겠죠?
 혼자 개발하는 프로젝트가 아닌 이상, branch의 명칭만 보아도 특정의 분석 없이 팀원들이 인지하고 쉽게 이슈를 찾을 수 있도록 기준을 세우는 것은 중요한 요소라 생각됩니다.
 
-
 ### git branch 관리 전략
-git-flow(https://nvie.com/posts/a-successful-git-branching-model/) 전략을 기본으로 1개의 branch를 추가하여 관리하고 있습니다.
+git-flow(https://nvie.com/posts/a-successful-git-branching-model/) 전략을 기본으로 1개의 branch를 추가하여 관리합니다.
 
 ![gitflow_coldfix](img/gitflow_coldfix.JPG)
 
