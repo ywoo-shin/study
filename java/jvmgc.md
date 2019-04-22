@@ -89,6 +89,7 @@ HeapDumpAfterFullGC | full gc 후 heap dump
 * GC 분석 도구
     * [IBM garbage analyzer](https://www.ibm.com/developerworks/community/groups/service/html/communityview?communityUuid=22d56091-3a7b-4497-b36e-634b51838e11) (java -Xms2g -Xmx2g -jar **.jar)
     * [HPJmeter](https://h20392.www2.hpe.com/portal/swdepot/displayProductInfo.do?productNumber=HPJMETERSW)  (java -Xms1g -Xmx1g -jar **.jar)
+    * [ThreadLogic](https://github.com/sparameswaran/threadlogic)
 * 메모리 분석 도구 (OOME)
     * [Eclipse MAT](https://www.eclipse.org/mat/)
         * http://jagadesh4java.blogspot.com/2013/06/eclipse-memory-analyzer.html
@@ -97,7 +98,7 @@ HeapDumpAfterFullGC | full gc 후 heap dump
 * Load Test
     * [Gatling](https://gatling.io/) (**.scalar)
     * [Apache Jmeter](http://jmeter.apache.org/)  (swing)
-    * [nGrinder](http://ngrinder.nhnent.com/) (for nhnent)
+    * nGrinder     
 * JDK
     * jmap
     ```properties

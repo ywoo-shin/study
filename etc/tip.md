@@ -28,3 +28,5 @@
 ## 6. HTTPPID
 https://httpie.org/
 
+## 7. KPI
+https://blog.gceasy.io/2016/10/01/garbage-collection-kpi/
