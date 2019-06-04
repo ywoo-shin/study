@@ -77,7 +77,7 @@ http://api.soccer.restapi.org/leagues/{league-id}/teams/{team-id}/players/{playe
 ```
 
 * CRUD 기능을 나태는 것은 URI에 사용하지 않는다.
-  * 반드시 지양해야 하는 패턴
+  * 반드시 지양해야 하는 패턴 (CRUD 기능을 수행하는 내용은 URI에 노출되면 안된다.)
   ```
   GET /deleteUser?id=1234
   GET /deleteUser/1234
