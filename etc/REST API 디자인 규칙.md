@@ -23,7 +23,9 @@ scheme "://" authority "/" path ["?" query] ["#" fragment]
 * 파일 확장자는 URI에 포함시키지 않는다.
 
 ### 2.5 리소스 원형
+
 * document
+  * 객체 인스턴스나 데이터베이스 레코드와 유사한 단일 개념
 ```
 http://api.soccer.restapi.org/leagues/seattle
 http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet
@@ -31,15 +33,11 @@ http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet/players/mike
 ```
 
 * collection
+  * 서버에서 관리하는 디렉터리라는 리소스
 ```
  http://api.soccer.restapi.org/leagues
  http://api.soccer.restapi.org/leagues/seattle/teams
  http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet/players
-```
-
-* store
-```
-PUT /users/1234/favorites/alonso
 ```
 
 * controller
@@ -50,6 +48,9 @@ PUT /users/1234/favorites/alonso
 // client가 사용자에게 경고를 재전송하게 하는 controller
 POST /alerts/245743/resend
 ```
+
+* store
+
 
 ### 2.6 URI 경로 디자인
 * document 이름으로는 단수 명사를 사용해야 한다.
@@ -114,28 +115,31 @@ POST /users/search
 * OPTIONS 메서드는 리소스의 사용 가능한 인터랙션을 기술한 메타데이터를 가져오는 데 사용해야 한다
 
 ### 3.3 응답 상태 코드
-* 200("OK")는 일반적인 요청 성공을 나타내는 데 사용해야 한다 
-* 200("OK")는 응답 바디에 에러를 전송하는 데 사용해서는 안 된다 
-* 201("Created")는 성공적으로 리소스를 생성했을 때 사용해야 한다 
-* 202("Accepted")는 비동기 처리가 성공적으로 시작되었음을 알릴 때 사용해야 한다 
-* 204("No Content")는 응답 바디에 의도적으로 아무것도 포함하지 않을 때 사용한다 
-* 301("Moved Permanently")는 리소스를 이동시켰을 때 사용한다 
-* 302("Found")는 사용하지 않는다 
-* 303("See Other")은 다른 URI를 참조하라고 알려줄 때 사용한다 
-* 304("Not Modified")는 대역폭을 절약할 때 사용한다 
-* 307("Temporary Redirect")은 클라이언트가 다른 URI로 요청을 다시 보내게 할 때 사용해야 한다 
-* 400("Bad Request")은 일반적인 요청 실패에 사용해야 한다 
-* 401("Unauthorized")은 클라이언트 인증에 문제가 있을 때 사용해야 한다 
-* 403("Forbidden")은 인증 상태에 상관없이 액세스를 금지할 때 사용해야 한다 
-* 404("Not Found")는 요청 URI에 해당하는 리소스가 없을 때 사용해야 한다 
-* 405("Method Not Allowed")는 HTTP 메서드가 지원되지 않을 때 사용해야 한다 
-* 406("Not Acceptable")은 요청된 리소스 미디어 타입을 제공하지 못할 때 사용해야 한다
-* 409("Conflict")는 리소스 상태에 위반되는 행위를 했을 때 사용해야 한다 
-* 412("Precondition Failed")는 조건부 연산을 지원할 때 사용한다 
-* 415("Unsupported Media Type")은 요청의 페이로드에 있는 미디어 타입이 처리되지 못했을 때 사용해야 한다 
-* 500("Internal Server Error")는 API가 잘못 작동할 때 사용해야 한다 
 
+HTTP STATUS | 설명
+--- | ---
+200 ("OK") | 일반적인 요청 성공을 나타내는 데 사용해야 한다.<br>응답 바디에 에러를 전송하는 데 사용해서는 안 된다. 
+201 ("Created") | 성공적으로 리소스를 생성했을 때 사용해야 한다 
+202 ("Accepted") | 비동기 처리가 성공적으로 시작되었음을 알릴 때 사용해야 한다 
+204 ("No Content") | 응답 바디에 의도적으로 아무것도 포함하지 않을 때 사용한다 
+301 ("Moved Permanently") | 리소스를 이동시켰을 때 사용한다 
+303 ("See Other") | 다른 URI를 참조하라고 알려줄 때 사용한다 
+304 ("Not Modified") | 대역폭을 절약할 때 사용한다 
+307 ("Temporary Redirect") | 클라이언트가 다른 URI로 요청을 다시 보내게 할 때 사용해야 한다 
+400 ("Bad Request") | 일반적인 요청 실패에 사용해야 한다 
+401 ("Unauthorized") | 클라이언트 인증에 문제가 있을 때 사용해야 한다 
+403 ("Forbidden") | 인증 상태에 상관없이 액세스를 금지할 때 사용해야 한다 
+404 ("Not Found") | 요청 URI에 해당하는 리소스가 없을 때 사용해야 한다 
+405 ("Method Not Allowed") | HTTP 메서드가 지원되지 않을 때 사용해야 한다 
+406 ("Not Acceptable") | 요청된 리소스 미디어 타입을 제공하지 못할 때 사용해야 한다
+409 ("Conflict") | 리소스 상태에 위반되는 행위를 했을 때 사용해야 한다 
+412 ("Precondition Failed") | 조건부 연산을 지원할 때 사용한다 
+415 ("Unsupported Media Type") | 요청의 페이로드에 있는 미디어 타입이 처리되지 못했을 때 사용해야 한다 
+500 ("Internal Server Error") | API가 잘못 작동할 때 사용해야 한다 
+ 
 ## 4장. 메타데이터 디자인
+
 ## 5장. 표현 디자인
+
 ## 6장. 클라이언트 영역
 
