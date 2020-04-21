@@ -10,3 +10,7 @@ public ObjectMapper unKnownFalseObjectMapper() {
             .disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
 }
 ```
+
+## token
+* seed = encode ('id' + 'timestamp' + 'randmon digit')
+* token = encode ('seed' + 'ttl' + 'token-timeout' + 'uuid') 
