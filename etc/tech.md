@@ -11,6 +11,20 @@ public ObjectMapper unKnownFalseObjectMapper() {
 }
 ```
 
-## token
+
+## Token
 * seed = encode ('id' + 'timestamp' + 'randmon digit')
 * token = encode ('seed' + 'ttl' + 'token-timeout' + 'uuid') 
+
+
+## How to get HttpServletRequest from HttpRequest
+```
+RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
+HttpServletRequest httpServletRequest = null;
+if (requestAttributes instanceof NativeWebRequest) {
+    httpServletRequest = (HttpServletRequest) ((NativeWebRequest) requestAttributes).getNativeRequest();
+
+} else if (requestAttributes != null) {
+    httpServletRequest = ((ServletRequestAttributes)requestAttributes).getRequest();
+}
+```
