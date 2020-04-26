@@ -46,3 +46,8 @@ modelMapper.addConverter(stringToDate);
 return modelMapper;
 ```
 
+## 정규식, 특정 index 부터 masking
+```
+"ywoo-shin".replace(/(?<=.{2})./gi, "*"); // yw*******
+```
+
