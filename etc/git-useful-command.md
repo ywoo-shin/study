@@ -109,6 +109,6 @@ $ git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgree
 
 ### tag 여러개 삭제
 ```
-$ git tag -l 'V0.1*' | xargs git tag -d
-$ git tag -l 'V0.1*' | xargs git push --delete <origin>
+$ git tag -l 'V0.1*' | xargs git tag -d # local
+$ git tag -l 'V0.1*' | xargs git push --delete <origin> # remote
 ```
