@@ -101,3 +101,8 @@ $ git push --force
 ```
 $ git remote -v
 ```
+
+### 브랜치 로그 차이점 확인
+```
+$ git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative {branch#1}..{branch#2}
+```
