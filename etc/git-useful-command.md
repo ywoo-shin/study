@@ -112,3 +112,8 @@ $ git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgree
 $ git tag -l 'V0.1*' | xargs git push --delete <origin> # remote
 $ git tag -l 'V0.1*' | xargs git tag -d # local
 ```
+
+### 커밋한 메시지 수정
+```
+$ git commit --amend -m "커밋메시지 "
+```
