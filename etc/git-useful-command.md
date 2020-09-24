@@ -117,3 +117,8 @@ $ git tag -l 'V0.1*' | xargs git tag -d # local
 ```
 $ git commit --amend -m "커밋메시지 "
 ```
+
+### git https 연결시, SSL certificate problem
+```
+$ git config --global http.sslVerify false
+``` 
